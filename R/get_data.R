@@ -23,7 +23,10 @@
 get_data = function(game= c("maismilionaria", "megasena", "lotofacil",  "quina", "lotomania",  "timemania", "duplasena",  "federal", "loteca", "diadesorte", "supersete"),
                     type = c("dezenas","ganhadores")){
 
+  game = match.arg(game)
+  type = match.arg(type)
   url = paste0("https://github.com/tomasbp2/LotteryBrasilDATA/blob/main/",game,"/",type,".rds?raw=true")
   file = readRDS(url(url))
+
   return(file)
 }
