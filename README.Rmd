@@ -34,6 +34,9 @@ devtools::install_github("tomasbp2/lotterybr")
 Downloading Megasena winners data:
 
 ```{r example, message = FALSE}
-megasena <- get_data(game= "megasena", type= "ganhadores")
+devtools::install_github("tomasbp2/lotterybr")
+library(lotterybr)
+
+lotofacil <- get_data(game= "lotofacil", type= "ganhadores")
 
 ```
