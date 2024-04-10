@@ -2,3 +2,10 @@
 ^\.Rproj\.user$
 ^README\.Rmd$
 ^inst/stuff$
+^\.github$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^doc$
+^Meta$
+^LICENSE\.md$

@@ -4,6 +4,8 @@
 # lotterybr
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/tomasbp2/lotterybr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/tomasbp2/lotterybr/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of the package is to provide a function to automatically import
@@ -24,9 +26,17 @@ devtools::install_github("tomasbp2/lotterybr")
 
 ## Example
 
-Downloading Lotofacil winners data:
+Downloading Megasena winners data:
 
 ``` r
+devtools::install_github("tomasbp2/lotterybr")
+#> ── R CMD build ─────────────────────────────────────────────────────────────────
+#> * checking for file ‘/tmp/Rtmp7fv91x/remotes12f19679d973d/tomasbp2-lotterybr-029fe86/DESCRIPTION’ ... OK
+#> * preparing ‘lotterybr’:
+#> * checking DESCRIPTION meta-information ... OK
+#> * checking for LF line-endings in source and make files and shell scripts
+#> * checking for empty or unneeded directories
+#> * building ‘lotterybr_0.1.0.tar.gz’
 library(lotterybr)
 
 lotofacil <- get_data(game= "lotofacil", type= "ganhadores")

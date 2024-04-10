@@ -7,3 +7,6 @@ inst/stuff
 .httr-oauth
 .DS_Store
 .quarto
+docs
+/doc/
+/Meta/
