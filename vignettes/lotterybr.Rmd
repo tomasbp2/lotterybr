@@ -17,3 +17,12 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(lotterybr)
 ```
+
+## get_data
+
+The function can be use in the following way
+
+```{r}
+quina_ganhadores = get_data("quina","ganhadores")
+lotofacil_dezenas =get_data("lotofacil","dezenas")
+```
