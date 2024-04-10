@@ -5,8 +5,8 @@
 \title{#' Function to download lottery data from git repository}
 \usage{
 get_data(
-  game = c("maismilionaria", "megasena", "lotofacil", "quina", "lotomania", "timemania",
-    "duplasena", "federal", "loteca", "diadesorte", "supersete"),
+  game = c("maismilionaria", "megasena", "lotofacil", "quina", "lotomania", "duplasena",
+    "diadesorte"),
   type = c("dezenas", "ganhadores")
 )
 }

@@ -20,7 +20,7 @@
 #' }
 #'
 
-get_data = function(game= c("maismilionaria", "megasena", "lotofacil",  "quina", "lotomania",  "timemania", "duplasena",  "federal", "loteca", "diadesorte", "supersete"),
+get_data = function(game= c("maismilionaria", "megasena", "lotofacil",  "quina", "lotomania", "duplasena", "diadesorte"),
                     type = c("dezenas","ganhadores")){
 
   game = match.arg(game)
