@@ -1,10 +1,13 @@
 Package: lotterybr
-Title: Lottery datasets from Caixa Federal
+Title: Lottery Datasets From Caixa Economica Federal
 Version: 0.1.0
 Authors@R: 
-    c(person("Tomas", "Bernardes", email = "tomasbp@ufmg.br", role = c("aut", "cre")),
-      person("Salvador", "Netto", email = "salvnetto@ufmg.br", role = "aut"))
-Description: Data from Lotteries of Brasil
+    c(
+      person("Tomas", "Bernardes", email = "tomasbp@ufmg.br", role = c("aut", "cre", "cph")),
+      person("Salvador", "Netto", email = "salvnetto@ufmg.br", role = "aut"),
+      person(given = "Fabio", family = "Demarqui", role = c("aut", "cph"), email = "fndemarqui@est.ufmg.br", comment = c(ORCID = "0000-0001-9236-1986"))
+    )
+Description: Set of functions to download data from brazilian lottery games.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
