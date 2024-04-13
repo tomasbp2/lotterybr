@@ -23,6 +23,6 @@ library(lotterybr)
 The function can be use in the following way
 
 ```{r}
-quina_ganhadores = get_data("quina","ganhadores")
-lotofacil_dezenas =get_data("lotofacil","dezenas")
+quina_ganhadores = get_data("quina","winners")
+lotofacil_dezenas = get_data("lotofacil","numbers")
 ```

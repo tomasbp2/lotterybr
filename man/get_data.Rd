@@ -2,18 +2,18 @@
 % Please edit documentation in R/get_data.R
 \name{get_data}
 \alias{get_data}
-\title{#' Function to download lottery data from git repository}
+\title{Function to download lottery data from git repository}
 \usage{
 get_data(
   game = c("maismilionaria", "megasena", "lotofacil", "quina", "lotomania", "duplasena",
     "diadesorte"),
-  type = c("dezenas", "ganhadores")
+  type = c("numbers", "winners")
 )
 }
 \arguments{
 \item{game}{select which Brazilian lottery game}
 
-\item{type}{select if you want the winners database or the results}
+\item{type}{select if you want the winners database or the numbers result}
 }
 \value{
 tibble/data.frame containing the downloaded data
@@ -24,10 +24,10 @@ This function downloads the Brazilian lottery game data from Caixa Federal up to
 \examples{
 \dontrun{
 library(LotteryBrasil)
-megasena_ganhadores <- get_data(game= "megasena",type = "ganhadores")
+megasena_ganhadores <- get_data(game= "megasena",type = "winners")
 megasena_ganhadores
 
-lotofacil_dezenas <- get_data(game= "lotofacil",type = "dezenas")
+lotofacil_dezenas <- get_data(game= "lotofacil",type = "numbers")
 lotofacil_dezenas
 }
 
