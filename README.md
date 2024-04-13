@@ -26,7 +26,7 @@ You can install the development version of lotterybr like so:
 
 ## Example
 
-Downloading Megasena winners data:
+Downloading Lotofacil winners data:
 
 ``` r
 library(lotterybr)
