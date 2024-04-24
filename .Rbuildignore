@@ -9,3 +9,5 @@
 ^doc$
 ^Meta$
 ^LICENSE\.md$
+^\.Rhistory$
+^cran-comments\.md$

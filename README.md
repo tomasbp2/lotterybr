@@ -29,7 +29,8 @@ You can install the development version of lotterybr like so:
 Downloading Lotofacil winners data:
 
 ``` r
+
 library(lotterybr)
 
-lotofacil <- get_data(game= "megasena", type= "winners")
+lotofacil <- get_data(game= "lotofacil", type= "winners")
 ```

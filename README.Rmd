@@ -38,6 +38,6 @@ Downloading Lotofacil winners data:
 
 library(lotterybr)
 
-lotofacil <- get_data(game= "lotofacil", type= "ganhadores")
+lotofacil <- get_data(game= "lotofacil", type= "winners")
 
 ```
