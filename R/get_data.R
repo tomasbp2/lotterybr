@@ -10,7 +10,7 @@
 #' @description This function downloads the Brazilian lottery game data from Caixa Federal up to the date declared
 
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' library(LotteryBrasil)
 #' megasena_ganhadores <- get_data(game= "megasena",type = "winners")
 #' megasena_ganhadores
