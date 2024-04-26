@@ -11,7 +11,7 @@
 
 #' @examples
 #' \donttest{
-#' library(LotteryBrasil)
+#' library(lotterybr)
 #' megasena_ganhadores <- get_data(game= "megasena",type = "winners")
 #' megasena_ganhadores
 #'

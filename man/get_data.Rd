@@ -22,8 +22,8 @@ tibble/data.frame containing the downloaded data
 This function downloads the Brazilian lottery game data from Caixa Federal up to the date declared
 }
 \examples{
-\dontrun{
-library(LotteryBrasil)
+\donttest{
+library(lotterybr)
 megasena_ganhadores <- get_data(game= "megasena",type = "winners")
 megasena_ganhadores
 

@@ -1,6 +1,6 @@
-── R CMD check results ──── lotterybr 0.1.0 ────
-Duration: 33s
+── R CMD check results ─────────────────────────────── lotterybr 0.1.0 ────
+Duration: 30.4s
 
 0 errors ✔ | 0 warnings ✔ | 0 notes ✔
 
-* Package also checked using GHA workflow
+R CMD check succeeded
