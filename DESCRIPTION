@@ -20,7 +20,3 @@ Suggests:
     testthat (>= 3.0.0)
 VignetteBuilder: knitr
 Config/testthat/edition: 3
-
-
-Set of functions to download data from brazilian lottery games of Caixa Ecnomica Federal 
-<https://loterias.caixa.gov.br/Paginas/default.aspx>, the datasets are stored in the github page 
