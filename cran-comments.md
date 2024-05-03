@@ -1,5 +1,5 @@
 ── R CMD check results ───────────────────────────────────────────────────────────────── lotterybr 0.1.0 ────
-Duration: 28.3s
+Duration: 22.8s
 
 ❯ checking for unstated dependencies in examples ... OK
    WARNING

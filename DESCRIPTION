@@ -7,12 +7,13 @@ Authors@R:
       person("Salvador", "Netto", email = "salvnetto@ufmg.br", role = "aut"),
       person(given = "Fabio", family = "Demarqui", role = c("aut", "cph"), email = "fndemarqui@est.ufmg.br", comment = c(ORCID = "0000-0001-9236-1986"))
     )
-Description: The lotterybr package is a collection of functions designed to streamline the retrieval of data from Brazilian lottery games operated by Caixa Econômica Federal, accessible through the official website at <https://loterias.caixa.gov.br/Paginas/default.aspx/>. Datasets for each game are conveniently stored on the GitHub page at <https://github.com/tomasbp2/LotteryBrasilDATA/>. Each game within this repository consists of two primary datasets: the winners dataset and the numbers dataset. The winners dataset includes crucial information such as the draw date, game type, potential matches, winners for each match, and corresponding prize amounts. Meanwhile, the numbers dataset provides essential details including the draw date, game type, and the numbers drawn during the respective lottery event. By offering easy access to these datasets, the lotterybr package facilitates efficient data retrieval and analysis for researchers, analysts, and enthusiasts interested in exploring the dynamics and outcomes of Brazilian lottery games.
+Description: A collection of functions designed to streamline the retrieval of data from Brazilian lottery games operated by Caixa Econômica Federal, accessible through the official website at <https://loterias.caixa.gov.br/Paginas/default.aspx/>. Datasets for each game are conveniently stored on the GitHub page at <https://github.com/tomasbp2/LotteryBrasilDATA/>. Each game within this repository consists of two primary datasets: the winners dataset and the numbers dataset. The winners dataset includes crucial information such as the draw date, game type, potential matches, winners for each match, and corresponding prize amounts. Meanwhile, the numbers dataset provides essential details including the draw date, game type, and the numbers drawn during the respective lottery event. By offering easy access to these datasets, the package facilitates efficient data retrieval and analysis for researchers, analysts, and enthusiasts interested in exploring the dynamics and outcomes of Brazilian lottery games.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
-URL: https://github.com/tomasbp2/lotterybr, https://tomasbp2.github.io/lotterybr/
+URL: https://github.com/tomasbp2/lotterybr, 
+     https://tomasbp2.github.io/lotterybr/
 BugReports: https://github.com/tomasbp2/lotterybr/issues
 Suggests: 
     knitr,
