@@ -23,7 +23,12 @@
 get_data = function(game= c("maismilionaria", "megasena", "lotofacil",  "quina", "lotomania", "duplasena", "diadesorte"),
                     type = c("numbers","winners")){
 
+  game = tolower(game)
+  type = tolower(type)
+
   game = match.arg(game)
+  type = match.arg(type)
+
   type = switch(
     type,
     'numbers' = 'dezenas',
