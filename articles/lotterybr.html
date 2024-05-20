@@ -94,7 +94,118 @@
 <code class="sourceCode R"><span><span class="va">quina_ganhadores</span> <span class="op">=</span> <span class="fu"><a href="../reference/get_data.html">get_data</a></span><span class="op">(</span><span class="st">"quina"</span>,<span class="st">"winners"</span><span class="op">)</span></span>
 <span><span class="va">lotofacil_dezenas</span> <span class="op">=</span> <span class="fu"><a href="../reference/get_data.html">get_data</a></span><span class="op">(</span><span class="st">"lotofacil"</span>,<span class="st">"numbers"</span><span class="op">)</span></span></code></pre></div>
 </div>
-  </main>
+<div class="section level2">
+<h2 id="format">Format<a class="anchor" aria-label="anchor" href="#format"></a>
+</h2>
+<p>Each game has two datasets, numbers and winners, with the following
+columns:</p>
+<div class="section level3">
+<h3 id="numbers">numbers<a class="anchor" aria-label="anchor" href="#numbers"></a>
+</h3>
+<div class="section level4">
+<h4 id="date">date<a class="anchor" aria-label="anchor" href="#date"></a>
+</h4>
+<p>Date type, the date that the game occurred in.</p>
+</div>
+<div class="section level4">
+<h4 id="course">course<a class="anchor" aria-label="anchor" href="#course"></a>
+</h4>
+<p>Integer type, which course the game took place</p>
+</div>
+<div class="section level4">
+<h4 id="accumulated">accumulated<a class="anchor" aria-label="anchor" href="#accumulated"></a>
+</h4>
+<p>Char type, if the game prize is accumulated “yes” or not “no”</p>
+</div>
+<div class="section level4">
+<h4 id="numbers-1">numbers<a class="anchor" aria-label="anchor" href="#numbers-1"></a>
+</h4>
+<p>Factor type with 60 levels, the drawn numbers.</p>
+</div>
+</div>
+<div class="section level3">
+<h3 id="winners">winners<a class="anchor" aria-label="anchor" href="#winners"></a>
+</h3>
+<div class="section level4">
+<h4 id="date-1">date<a class="anchor" aria-label="anchor" href="#date-1"></a>
+</h4>
+<p>Date type, the date that the game occurred in.</p>
+</div>
+<div class="section level4">
+<h4 id="course-1">course<a class="anchor" aria-label="anchor" href="#course-1"></a>
+</h4>
+<p>Integer type, which course the game took place .</p>
+</div>
+<div class="section level4">
+<h4 id="accumulated-1">accumulated<a class="anchor" aria-label="anchor" href="#accumulated-1"></a>
+</h4>
+<p>Char type, if the game prize is accumulated “yes” or not “no”</p>
+</div>
+<div class="section level4">
+<h4 id="match">match<a class="anchor" aria-label="anchor" href="#match"></a>
+</h4>
+<p>Char type, the possible match.</p>
+</div>
+<div class="section level4">
+<h4 id="winners-1">winners<a class="anchor" aria-label="anchor" href="#winners-1"></a>
+</h4>
+<p>Integer type, the number of winners of each possible match.</p>
+</div>
+<div class="section level4">
+<h4 id="prize">prize<a class="anchor" aria-label="anchor" href="#prize"></a>
+</h4>
+<p>Integer type, the prize for each type.</p>
+<p>Some games, like “duplasena” or “diadesorte”, may contain additional
+columns since each game has a different way of drawing numbers.
+Therefore, a brief explanation of each game is as follows.</p>
+</div>
+</div>
+<div class="section level3">
+<h3 id="maismilionaria">maismilionaria<a class="anchor" aria-label="anchor" href="#maismilionaria"></a>
+</h3>
+<p>Maismilionaria involves selecting five numbers from one pool and one
+additional number from another pool, with the potential to win
+multimillion-dollar jackpots.</p>
+</div>
+<div class="section level3">
+<h3 id="megasena">megasena<a class="anchor" aria-label="anchor" href="#megasena"></a>
+</h3>
+<p>Six numbers are drawn from a pool of 60, with players aiming to match
+as many as possible for substantial prizes.</p>
+</div>
+<div class="section level3">
+<h3 id="lotofacil">lotofacil<a class="anchor" aria-label="anchor" href="#lotofacil"></a>
+</h3>
+<p>Lotofacil involves picking 15 numbers from a pool of 25, with prizes
+awarded for varying levels of matches.</p>
+</div>
+<div class="section level3">
+<h3 id="quina">quina<a class="anchor" aria-label="anchor" href="#quina"></a>
+</h3>
+<p>Players select five numbers from a pool of 80, aiming to match as
+many as possible for prizes.</p>
+</div>
+<div class="section level3">
+<h3 id="lotomania">lotomania<a class="anchor" aria-label="anchor" href="#lotomania"></a>
+</h3>
+<p>Lotomania involves selecting 50 numbers from a pool of 100, with
+prizes awarded for matching a certain number of drawn numbers.</p>
+</div>
+<div class="section level3">
+<h3 id="duplasena">duplasena<a class="anchor" aria-label="anchor" href="#duplasena"></a>
+</h3>
+<p>Dupla-Sena involves two separate draws, each with six numbers drawn
+from a pool of 50, offering double the chances to win.</p>
+</div>
+<div class="section level3">
+<h3 id="diadesorte">diadesorte<a class="anchor" aria-label="anchor" href="#diadesorte"></a>
+</h3>
+<p>In Dia de Sorte, players choose seven numbers and a month, with
+prizes awarded for matching numbers and/or the month drawn.</p>
+</div>
+</div>
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
