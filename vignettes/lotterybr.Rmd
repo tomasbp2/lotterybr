@@ -17,14 +17,15 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(lotterybr)
 ```
+This will open the shiny app for better visualisation of the datasets
 
 ## get_data
 
 The function can be use in the following way
 
 ```{r}
-quina_ganhadores = get_data("quina","winners")
-lotofacil_dezenas = get_data("lotofacil","numbers")
+quina_ganhadores = get_data("quina","winners","ptbr")
+lotofacil_numbers = get_data("lotofacil","numbers","eng")
 ```
 
 ## Format

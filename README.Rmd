@@ -16,7 +16,9 @@ knitr::opts_chunk$set(
 # lotterybr
 
 <!-- badges: start -->
+
 [![R-CMD-check](https://github.com/tomasbp2/lotterybr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/tomasbp2/lotterybr/actions/workflows/R-CMD-check.yaml)
+
 <!-- badges: end -->
 
 The goal of the package is to provide a function to automatically import data from the lotteries of Caixa Econômica Federal into the R environment. Data from the lotteries of Caixa Econômica Federal includes information on various games such as Mega-Sena, Lotofácil, Quina, among others. They are downloaded from the official website of the Federal Savings Bank at <https://loterias.caixa.gov.br/>.
@@ -39,5 +41,14 @@ Downloading Lotofacil winners data:
 library(lotterybr)
 
 lotofacil <- get_data(game= "lotofacil", type= "winners")
+
+```
+
+Opening the shiny app
+
+```{r example_shiny , message = FALSE,warning=FALSE}
+
+library(lotterybr)
+open_app()
 
 ```

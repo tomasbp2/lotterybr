@@ -6,10 +6,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/tomasbp2/lotterybr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/tomasbp2/lotterybr/actions/workflows/R-CMD-check.yaml)
-[![R build status](https://github.com/tomasbp2/lotterybr/workflows/R-CMD-check/badge.svg)](https://github.com/tomasb2/lotterybr/actions)
-[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/lotterybr)](https://cran.r-project.org/package=lotterybr)
-[![Downloads](https://cranlogs.r-pkg.org/badges/lotterybr)](https://cran.r-project.org/package=lotterybr)
-[![Total Downloads](https://cranlogs.r-pkg.org/badges/grand-total/survstan?color=orange)](https://cran.r-project.org/package=lotterybr)
+
 <!-- badges: end -->
 
 The goal of the package is to provide a function to automatically import
@@ -38,3 +35,13 @@ library(lotterybr)
 
 lotofacil <- get_data(game= "lotofacil", type= "winners")
 ```
+
+Opening the shiny app
+
+``` r
+
+library(lotterybr)
+open_app()
+```
+
+<div style="width: 100% ; height: 400px ; text-align: center; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" class="muted well">Shiny applications not supported in static R Markdown documents</div>
