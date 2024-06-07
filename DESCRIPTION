@@ -1,6 +1,6 @@
 Package: lotterybr
 Title: Lottery Datasets from Caixa Economica Federal
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: 
     c(
       person("Tomas", "Bernardes", email = "tomasbp@ufmg.br", role = c("aut", "cre", "cph")),
