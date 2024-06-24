@@ -19,13 +19,13 @@ library(lotterybr)
 ```
 This will open the shiny app for better visualisation of the datasets
 
-## get_data
+# get_data
 
 The function can be use in the following way
 
 ```{r}
-quina_ganhadores = get_data("quina","winners","ptbr")
-lotofacil_numbers = get_data("lotofacil","numbers","eng")
+quina_ganhadores = get_data(game ="quina",type = "winners","ptbr")
+lotofacil_numbers = get_data(game = "lotofacil",type = "numbers","eng")
 ```
 
 ## Format
@@ -105,4 +105,12 @@ Dupla-Sena involves two separate draws, each with six numbers drawn from a pool 
 
 In Dia de Sorte, players choose seven numbers and a month, with prizes awarded for matching numbers and/or the month drawn.
 
+## open_app
 
+The function can be use in the following way
+
+```{r echo = T, results = 'hide'}
+open_app()
+```
+
+it opens the shiny app containing a graph, table and a brief description of the selected game and data type

@@ -1,0 +1,53 @@
+---
+title: "Example"
+output: rmarkdown::html_vignette 
+vignette: >
+  %\VignetteIndexEntry{Introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+# Example
+
+In this vignette we are going to see an example of the usage of this package
+first, let's start by loading in the package
+
+```{r, message=FALSE}
+# install.packages("lotterybr")
+library(lotterybr)
+library(ggplot2)
+```
+
+Let's suppose that we want to see the data of numbers of the game megasena in portuguese, therefore we can do
+
+```{r, message=FALSE}
+megasena_numbers = get_data(game = "megasena", type = "numbers", language = "ptbr")
+head(megasena_numbers)
+```
+
+Or, if we want to see the winners of lotofacil in portuguese
+
+```{r, message=FALSE}
+lotofacil_winners = get_data(game = "lotofacil", type = "winners", language = "eng")
+head(lotofacil_winners)
+```
+
+We can use this data to create plots
+
+```{r, message=FALSE}
+ggplot(lotofacil_winners, aes(x = factor(match), y = winners, fill = match)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(x = "Match", y = "Winners frequency", title = "Winners by Match") +
+  theme_minimal()
+```
+
+or to analyse the data:
+
+```{r, message=FALSE}
+df = data.frame(
+  dezenas =summary(
+    megasena_numbers$dezenas
+    )
+  )
+summary(df$dezenas)
+head(df)
+```

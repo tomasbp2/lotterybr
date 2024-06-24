@@ -18,6 +18,10 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/tomasbp2/lotterybr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/tomasbp2/lotterybr/actions/workflows/R-CMD-check.yaml)
+[![R build status](https://github.com/tomasbp2/lotterybr/workflows/R-CMD-check/badge.svg)](https://github.com/tomasb2/lotterybr/actions)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/lotterybr)](https://cran.r-project.org/package=lotterybr)
+[![Downloads](https://cranlogs.r-pkg.org/badges/lotterybr)](https://cran.r-project.org/package=lotterybr)
+[![Total Downloads](https://cranlogs.r-pkg.org/badges/grand-total/survstan?color=orange)](https://cran.r-project.org/package=lotterybr)
 
 <!-- badges: end -->
 
