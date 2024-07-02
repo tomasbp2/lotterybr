@@ -1,5 +1,13 @@
 ---
 title: "Shiny Aplicattion"
+output: rmarkdown::html_vignette 
+format: 
+  html:
+    toc: true
+vignette: >
+  %\VignetteIndexEntry{ShinyApp}
+  %\VignetteEngine{quarto::html}
+  %\VignetteEncoding{UTF-8}
 ---
 This is the shiny application that allows the user
 <style>
