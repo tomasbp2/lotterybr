@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Lottery Brasil</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="lotterybr_files/libs/clipboard/clipboard.min.js"></script>
+<script src="lotterybr_files/libs/quarto-html/quarto.js"></script>
+<script src="lotterybr_files/libs/quarto-html/popper.min.js"></script>
+<script src="lotterybr_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="lotterybr_files/libs/quarto-html/anchor.min.js"></script>
+<link href="lotterybr_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="lotterybr_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="lotterybr_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="lotterybr_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="lotterybr_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#get_data" id="toc-get_data" class="nav-link active" data-scroll-target="#get_data">get_data</a>
+  <ul class="collapse">
+  <li><a href="#format" id="toc-format" class="nav-link" data-scroll-target="#format">Format</a>
+  <ul class="collapse">
+  <li><a href="#numbers" id="toc-numbers" class="nav-link" data-scroll-target="#numbers">numbers</a></li>
+  <li><a href="#winners" id="toc-winners" class="nav-link" data-scroll-target="#winners">winners</a></li>
+  <li><a href="#maismilionaria" id="toc-maismilionaria" class="nav-link" data-scroll-target="#maismilionaria">maismilionaria</a></li>
+  <li><a href="#megasena" id="toc-megasena" class="nav-link" data-scroll-target="#megasena">megasena</a></li>
+  <li><a href="#lotofacil" id="toc-lotofacil" class="nav-link" data-scroll-target="#lotofacil">lotofacil</a></li>
+  <li><a href="#quina" id="toc-quina" class="nav-link" data-scroll-target="#quina">quina</a></li>
+  <li><a href="#lotomania" id="toc-lotomania" class="nav-link" data-scroll-target="#lotomania">lotomania</a></li>
+  <li><a href="#duplasena" id="toc-duplasena" class="nav-link" data-scroll-target="#duplasena">duplasena</a></li>
+  <li><a href="#diadesorte" id="toc-diadesorte" class="nav-link" data-scroll-target="#diadesorte">diadesorte</a></li>
+  </ul></li>
+  <li><a href="#open_app" id="toc-open_app" class="nav-link" data-scroll-target="#open_app">open_app</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lottery Brasil</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lotterybr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Loading required package: dplyr</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Attaching package: 'dplyr'</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The following objects are masked from 'package:stats':</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     filter, lag</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The following objects are masked from 'package:base':</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     intersect, setdiff, setequal, union</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Loading required package: ggplot2</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Loading required package: shiny</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Loading required package: plotly</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Attaching package: 'plotly'</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The following object is masked from 'package:ggplot2':</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     last_plot</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The following object is masked from 'package:stats':</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     filter</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; The following object is masked from 'package:graphics':</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     layout</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This will open the shiny app for better visualisation of the datasets</p>
+<section id="get_data" class="level1">
+<h1>get_data</h1>
+<p>The function can be use in the following way</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>quina_ganhadores <span class="ot">=</span> <span class="fu">get_data</span>(<span class="at">game =</span><span class="st">"quina"</span>,<span class="at">type =</span> <span class="st">"winners"</span>,<span class="st">"ptbr"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>lotofacil_numbers <span class="ot">=</span> <span class="fu">get_data</span>(<span class="at">game =</span> <span class="st">"lotofacil"</span>,<span class="at">type =</span> <span class="st">"numbers"</span>,<span class="st">"eng"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="format" class="level2">
+<h2 class="anchored" data-anchor-id="format">Format</h2>
+<p>Each game has two datasets, numbers and winners, with the following columns:</p>
+<section id="numbers" class="level3">
+<h3 class="anchored" data-anchor-id="numbers">numbers</h3>
+<section id="date" class="level4">
+<h4 class="anchored" data-anchor-id="date">date</h4>
+<p>Date type, the date that the game occurred in.</p>
+</section>
+<section id="course" class="level4">
+<h4 class="anchored" data-anchor-id="course">course</h4>
+<p>Integer type, which course the game took place</p>
+</section>
+<section id="accumulated" class="level4">
+<h4 class="anchored" data-anchor-id="accumulated">accumulated</h4>
+<p>Char type, if the game prize is accumulated “yes” or not “no”</p>
+</section>
+<section id="numbers-1" class="level4">
+<h4 class="anchored" data-anchor-id="numbers-1">numbers</h4>
+<p>Factor type with 60 levels, the drawn numbers.</p>
+</section>
+</section>
+<section id="winners" class="level3">
+<h3 class="anchored" data-anchor-id="winners">winners</h3>
+<section id="date-1" class="level4">
+<h4 class="anchored" data-anchor-id="date-1">date</h4>
+<p>Date type, the date that the game occurred in.</p>
+</section>
+<section id="course-1" class="level4">
+<h4 class="anchored" data-anchor-id="course-1">course</h4>
+<p>Integer type, which course the game took place .</p>
+</section>
+<section id="accumulated-1" class="level4">
+<h4 class="anchored" data-anchor-id="accumulated-1">accumulated</h4>
+<p>Char type, if the game prize is accumulated “yes” or not “no”</p>
+</section>
+<section id="match" class="level4">
+<h4 class="anchored" data-anchor-id="match">match</h4>
+<p>Char type, the possible match.</p>
+</section>
+<section id="winners-1" class="level4">
+<h4 class="anchored" data-anchor-id="winners-1">winners</h4>
+<p>Integer type, the number of winners of each possible match.</p>
+</section>
+<section id="prize" class="level4">
+<h4 class="anchored" data-anchor-id="prize">prize</h4>
+<p>Integer type, the prize for each type.</p>
+<p>Some games, like “duplasena” or “diadesorte”, may contain additional columns since each game has a different way of drawing numbers. Therefore, a brief explanation of each game is as follows.</p>
+</section>
+</section>
+<section id="maismilionaria" class="level3">
+<h3 class="anchored" data-anchor-id="maismilionaria">maismilionaria</h3>
+<p>Maismilionaria involves selecting five numbers from one pool and one additional number from another pool, with the potential to win multimillion-dollar jackpots.</p>
+</section>
+<section id="megasena" class="level3">
+<h3 class="anchored" data-anchor-id="megasena">megasena</h3>
+<p>Six numbers are drawn from a pool of 60, with players aiming to match as many as possible for substantial prizes.</p>
+</section>
+<section id="lotofacil" class="level3">
+<h3 class="anchored" data-anchor-id="lotofacil">lotofacil</h3>
+<p>Lotofacil involves picking 15 numbers from a pool of 25, with prizes awarded for varying levels of matches.</p>
+</section>
+<section id="quina" class="level3">
+<h3 class="anchored" data-anchor-id="quina">quina</h3>
+<p>Players select five numbers from a pool of 80, aiming to match as many as possible for prizes.</p>
+</section>
+<section id="lotomania" class="level3">
+<h3 class="anchored" data-anchor-id="lotomania">lotomania</h3>
+<p>Lotomania involves selecting 50 numbers from a pool of 100, with prizes awarded for matching a certain number of drawn numbers.</p>
+</section>
+<section id="duplasena" class="level3">
+<h3 class="anchored" data-anchor-id="duplasena">duplasena</h3>
+<p>Dupla-Sena involves two separate draws, each with six numbers drawn from a pool of 50, offering double the chances to win.</p>
+</section>
+<section id="diadesorte" class="level3">
+<h3 class="anchored" data-anchor-id="diadesorte">diadesorte</h3>
+<p>In Dia de Sorte, players choose seven numbers and a month, with prizes awarded for matching numbers and/or the month drawn.</p>
+</section>
+</section>
+<section id="open_app" class="level2">
+<h2 class="anchored" data-anchor-id="open_app">open_app</h2>
+<p>The function can be use in the following way</p>
+<div class="cell">
+<pre><code>#&gt; `shiny::dataTableOutput()` is deprecated as of shiny 1.8.1.
+#&gt; Please use `DT::DTOutput()` instead.
+#&gt; See &lt;https://rstudio.github.io/DT/shiny.html&gt; for more information.</code></pre>
+<div class="cell-output-display">
+<p></p><div style="width: 100% ; height: 400px ; text-align: center; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" class="muted well">Shiny applications not supported in static R Markdown documents</div><p></p>
+</div>
+</div>
+<p>it opens the shiny app containing a graph, table and a brief description of the selected game and data type. You can view this app by clicking <a href="./vignettes/shinytest.qmd">Here</a></p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

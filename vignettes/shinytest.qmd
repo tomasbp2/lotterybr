@@ -1,0 +1,23 @@
+---
+title: "Shiny Aplicattion"
+---
+This is the shiny application that allows the user
+<style>
+.shiny-app-frame {
+  position: fixed;
+  left: 0;
+  top: 100px;
+  bottom: 0;
+  right: 0;
+}
+.shiny-app-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+
+<div class="shiny-app-frame"> 
+<iframe src="https://tomasbp.shinyapps.io/lotterybrapp/">
+</iframe>
+</div>

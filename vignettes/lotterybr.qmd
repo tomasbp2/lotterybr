@@ -1,9 +1,12 @@
 ---
 title: "Lottery Brasil"
-output: rmarkdown::html_vignette
+output: rmarkdown::html_vignette 
+format: 
+  html:
+    toc: true
 vignette: >
-  %\VignetteIndexEntry{Introduction}
-  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{lotterybr}
+  %\VignetteEngine{quarto::html}
   %\VignetteEncoding{UTF-8}
 ---
 
@@ -109,8 +112,9 @@ In Dia de Sorte, players choose seven numbers and a month, with prizes awarded f
 
 The function can be use in the following way
 
-```{r echo = T, results = 'hide'}
-open_app()
+```{r}
+#open_app(language = "eng")
 ```
 
-it opens the shiny app containing a graph, table and a brief description of the selected game and data type
+it opens the shiny app containing a graph, table and a brief description of the selected game and data type. With the langugage argument, you can select either Portuguese or English.
+You can view this app by clicking [Here](../articles/shinytest.html)

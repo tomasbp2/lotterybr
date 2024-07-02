@@ -1,9 +1,12 @@
 ---
 title: "Example"
 output: rmarkdown::html_vignette 
+format: 
+  html:
+    toc: true
 vignette: >
   %\VignetteIndexEntry{Introduction}
-  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEngine{quarto::html}
   %\VignetteEncoding{UTF-8}
 ---
 # Example

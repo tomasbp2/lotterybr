@@ -1,4 +1,9 @@
 url: https://tomasbp2.github.io/lotterybr/
 template:
-  bootstrap: 5
-
+  bootswatch: materia
+  bslib:
+    version: 5
+    bg: "#fcfcfc"
+    fg: "#0f0f0f"
+    primary: "#0b9919"
+    pkgdown-nav-height: 80px
