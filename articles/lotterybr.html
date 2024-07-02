@@ -29,7 +29,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light" data-bs-theme="light"><div class="container">
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-primary" data-bs-theme="dark"><div class="container">
     
     <a class="navbar-brand me-2" href="../index.html">lotterybr</a>
 
@@ -52,6 +52,7 @@
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/example.html">Example</a>
+    <a class="dropdown-item" href="../articles/shinytest.html">Shiny Aplicattion</a>
   </div>
 </li>
 <li class="nav-item">
@@ -84,8 +85,8 @@
       <img src="../logo.png" class="logo" alt=""><h1>Lottery Brasil</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/tomasbp2/lotterybr/blob/HEAD/vignettes/lotterybr.Rmd" class="external-link"><code>vignettes/lotterybr.Rmd</code></a></small>
-      <div class="d-none name"><code>lotterybr.Rmd</code></div>
+      <small class="dont-index">Source: <a href="https://github.com/tomasbp2/lotterybr/blob/HEAD/vignettes/lotterybr.qmd" class="external-link"><code>vignettes/lotterybr.qmd</code></a></small>
+      <div class="d-none name"><code>lotterybr.qmd</code></div>
     </div>
 
     
@@ -239,12 +240,11 @@ prizes awarded for matching numbers and/or the month drawn.</p>
 </h3>
 <p>The function can be use in the following way</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/open_app.html">open_app</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; `shiny::dataTableOutput()` is deprecated as of shiny 1.8.1.</span></span>
-<span><span class="co">#&gt; Please use `DT::DTOutput()` instead.</span></span>
-<span><span class="co">#&gt; See &lt;https://rstudio.github.io/DT/shiny.html&gt; for more information.</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="co">#open_app(language = "eng")</span></span></code></pre></div>
 <p>it opens the shiny app containing a graph, table and a brief
-description of the selected game and data type</p>
+description of the selected game and data type. With the langugage
+argument, you can select either Portuguese or English. You can view this
+app by clicking <a href="../articles/shinytest.html">Here</a></p>
 </div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
