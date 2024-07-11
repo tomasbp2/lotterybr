@@ -12,5 +12,3 @@
 ^\.Rhistory$
 ^cran-comments\.md$
 ^CRAN-SUBMISSION$
-^vignettes/shinytest\.qmd$
-^vignettes$
