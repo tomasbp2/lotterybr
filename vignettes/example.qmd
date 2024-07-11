@@ -15,7 +15,7 @@ In this vignette we are going to see an example of the usage of this package
 first, let's start by loading in the package
 
 ```{r, message=FALSE}
-# install.packages("lotterybr")
+install.packages("lotterybr")
 library(lotterybr)
 library(ggplot2)
 ```

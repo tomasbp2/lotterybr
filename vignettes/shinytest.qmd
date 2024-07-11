@@ -9,7 +9,6 @@ vignette: >
   %\VignetteEngine{quarto::html}
   %\VignetteEncoding{UTF-8}
 ---
-This is the shiny application that allows the user
 <style>
 .shiny-app-frame {
   position: fixed;
